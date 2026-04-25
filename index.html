@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STARS TEAM</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0b0b0f;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+.logo h2{
+    color:gold;
+    letter-spacing:2px;
+}
+
+/* NAV LINKS */
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+    cursor:pointer;
+    position:relative;
+    padding:5px;
+    transition:0.3s ease;
+}
+
+/* underline animation */
+nav ul li::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:gold;
+    transition:0.3s;
+}
+
+nav ul li:hover{
+    color:gold;
+    transform:translateY(-3px) scale(1.05);
+}
+
+nav ul li:hover::after{
+    width:100%;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+    background:radial-gradient(circle,#1a1a2e,#0b0b0f);
+}
+
+.hero h1{
+    font-size:70px;
+    color:gold;
+    letter-spacing:3px;
+}
+
+.hero p{
+    max-width:750px;
+    margin-top:20px;
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* SECTIONS */
+section{
+    padding:120px 40px;
+}
+
+.title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:50px;
+    color:gold;
+}
+
+/* ABOUT */
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* TEAM */
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    width:230px;
+    border-radius:15px;
+    text-align:center;
+    padding:15px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:gold;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h4{
+    color:gold;
+    margin-top:10px;
+}
+
+.card p{
+    color:#aaa;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact button{
+    padding:12px 20px;
+    margin:10px;
+    background:gold;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+
+    <div class="logo">
+        <img src="graphic design/77f5f823-7b65-4922-8454-c584e6a4547f.jpeg" alt="logo">
+        <h2>STARS TEAM</h2>
+    </div>
+
+    <ul>
+        <li onclick="scrollToSection('home')">Home</li>
+        <li onclick="scrollToSection('about')">About</li>
+        <li onclick="scrollToSection('team')">Team</li>
+        <li onclick="scrollToSection('work')">Work</li>
+        <li onclick="scrollToSection('contact')">Contact</li>
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+    <h1>STARS TEAM</h1>
+    <p>
+        We are a creative design studio delivering high-end branding, social media, and visual identity solutions.
+        We transform ideas into powerful visual experiences that help brands stand out globally.
+    </p>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="title">ABOUT US</div>
+    <div class="about">
+        We are a professional graphic design team focused on building strong visual identities.
+        Our mission is to deliver modern, creative, and impactful designs that help brands grow and stand out in the market.
+    </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+    <div class="title">OUR TEAM</div>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="graphic design/77f5f823-7b65-4922-8454-c584e6a4547f.jpeg">
+            <h4>Member 1</h4>
+            <p>Graphic Designer</p>
+        </div>
+
+        <div class="card">
+            <img src="graphic design/77f5f823-7b65-4922-8454-c584e6a4547f.jpeg">
+            <h4>Member 2</h4>
+            <p>Brand Designer</p>
+        </div>
+
+        <div class="card">
+            <img src="graphic design/77f5f823-7b65-4922-8454-c584e6a4547f.jpeg">
+            <h4>Member 3</h4>
+            <p>Social Media Designer</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+    <div class="title">PORTFOLIO</div>
+
+    <div class="gallery">
+        <img src="graphic design/77f5f823-7b65-4922-8454-c584e6a4547f.jpeg">
+        <img src="graphic design/77f5f823-7b65-4922-8454-c584e6a4547f.jpeg">
+        <img src="graphic design/77f5f823-7b65-4922-8454-c584e6a4547f.jpeg">
+        <img src="graphic design/77f5f823-7b65-4922-8454-c584e6a4547f.jpeg">
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="title">CONTACT US</div>
+
+    <div class="contact">
+        <button onclick="window.open('https://wa.me/201234567890')">WhatsApp</button>
+        <button onclick="window.open('https://facebook.com')">Facebook</button>
+        <button onclick="window.open('https://instagram.com')">Instagram</button>
+
+        <p style="margin-top:20px;color:#aaa;">Email: stars@email.com</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 STARS TEAM
+</footer>
+
+<script>
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
